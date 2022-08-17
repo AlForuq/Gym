@@ -6,4 +6,9 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 2rem;
   width: 1440px;
+
+  @media(max-width: 768px){
+    width:auto;
+  }
+  
 `;

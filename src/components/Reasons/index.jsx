@@ -23,7 +23,7 @@ import tick from "../../assets/tick.png";
 
 export const Reasons = () => {
   return (
-    <ReasonsContainer>
+    <ReasonsContainer id="reasons">
       <Left>
         <Left.Img1 src={image1} />
         <Left.Img2 src={image2} />
@@ -57,7 +57,7 @@ export const Reasons = () => {
         <PartnerWrapper>
           <PartnerText>OUR PARTNERS</PartnerText>
           <PartnerLogo>
-             <img alt="" src={nb}  />
+            <img alt="" src={nb} />
             <img alt="" src={adidas} />
             <img alt="" src={nike} />
           </PartnerLogo>

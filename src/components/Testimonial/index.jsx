@@ -35,14 +35,14 @@ export const Testimonial = () => {
       setState(state+2)
     }
   };
-console.log(state);
+// console.log(state);
   return (
-    <Container>
+    <Container id="testimonials">
       <Left>
         <Intro>TESTIMONIALS</Intro>
         <Span>WHAT THEY</Span>
         <QuestionTitle>SAY ABOUT US</QuestionTitle>
-        <Desc>{testimonialsData[state].review}</Desc>
+        <Desc key={state}>{testimonialsData[state].review}</Desc>
         <Name>
           {testimonialsData[state].name}
           {" -- "}
@@ -52,7 +52,7 @@ console.log(state);
       <Right>
         <div></div>
         <div></div>
-        <Image src={testimonialsData[state].image} />
+        <Image key={state} src={testimonialsData[state].image} />
         <Icons>
           <Icons.Left onClick={Decrement} />
           <Icons.Right onClick={Increment} />

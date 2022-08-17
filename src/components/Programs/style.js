@@ -16,6 +16,14 @@ export const Header = styled.div`
   color: white;
   text-transform: uppercase;
   font-style: italic;
+
+  @media (max-width: 768px) {
+    margin-top: 3rem;
+    flex-direction:column;
+    gap:1rem;
+    font-size:x-large;
+    align-items:center;
+  }
 `;
 
 Header.Stroke = styled.div`
@@ -26,9 +34,13 @@ Header.Stroke = styled.div`
 
 export const Wrapper = styled.div`
   display: flex;
-  gap:1rem;
+  gap: 1rem;
   justify-content: space-between;
   width: 100%;
+
+  @media (max-width: 768px){
+    flex-direction:column;
+  }
 `;
 
 export const ProgramDataWrapper = styled.div`
@@ -42,7 +54,7 @@ export const ProgramDataWrapper = styled.div`
   padding: 32px;
   background-color: #808080;
   box-sizing: border-box;
-  width: 313px;
+  width: fit-content;
   max-height: fit-content;
 
   transition: 0.2s;
@@ -55,7 +67,11 @@ export const ProgramDataWrapper = styled.div`
   :active {
     cursor: pointer;
     background-color: var(--darkOrange);
-    transform: scale(1);  
+    transform: scale(1);
+  }
+
+  @media (max-width: 768px){
+    gap:1rem;
   }
 `;
 

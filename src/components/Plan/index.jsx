@@ -17,17 +17,18 @@ import ArRight from '../../assets/rightArrow.png'
 
 export const Plan = () => {
   return (
-    <PlanContainer>
+    <PlanContainer id="plans">
+      <PlanBlur className="blur" />
       <PlanBlur className="blur" />
       <Header>
         <Header.Stroke>READY TO START</Header.Stroke>
-        <idv>YOUR JOURNEY</idv>
+        <div>YOUR JOURNEY</div>
         <Header.Stroke>NOW WITHUS</Header.Stroke>
       </Header>
 
       <Wrapper className="Wrapper">
         {plansData.map((value) => (
-          <PlansData className="planData">
+          <PlansData key={value.name} className="planData">
             {value.icon}
             <Title>{value.name}</Title>
             <Price>$ {value.price}</Price>
@@ -53,9 +54,7 @@ export const Plan = () => {
               <img alt="" width={"15px"} height={"15px"} src={ArRight} />
             </Features.Wrapper>
 
-            <Button className="btn" >
-                Join Now
-            </Button>
+            <Button className="btn">Join Now</Button>
           </PlansData>
         ))}
       </Wrapper>

@@ -1,13 +1,19 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    display:flex;
-    padding: 2rem;
-`
+  display: flex;
+  padding: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction:column ;
+    gap:2rem;
+  }
+`;
 
 export const Left = styled.div`
   flex: 1;
   position: relative;
+  
 
 
 
@@ -25,6 +31,8 @@ export const Left = styled.div`
 export const Right = styled.div`
     flex:1;
     position: relative;
+    display:flex;
+    justify-content:center;
 `;
 
 export const Header = styled.div`
@@ -34,6 +42,10 @@ export const Header = styled.div`
   font-size: 3.5rem;
   color: white;
   text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 `;
 
 Header.Stroke = styled.span`
@@ -43,10 +55,9 @@ Header.Stroke = styled.span`
 `;
 
 export const Wrapper = styled.form`
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 0 2rem;
   width: fit-content;
   height: 4.5rem;
@@ -54,12 +65,18 @@ export const Wrapper = styled.form`
 
   position: absolute;
   bottom: 0;
+
+  @media (max-width: 768px){
+    position:relative;
+    width:fit-content;
+    padding: 0 14px
+  }
 `;
 
 export const Input = styled.input`
   /* width:100%; */
   background: inherit;
-  font-size:17px;
+  font-size: 17px;
   color: #c6c7be;
   border: none;
   outline: none;
@@ -69,6 +86,10 @@ export const Input = styled.input`
   /* ::marker {
     color: #c6c7be;
   } */
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 
@@ -92,6 +113,12 @@ export const BtnJoin = styled.button`
   }
   :active {
     transform: scale(0.97);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 13px;
+    width: 74px;
+    height: 35px;
   }
 `;
 

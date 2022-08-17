@@ -14,7 +14,7 @@ import RtArrow from "../../assets/rightArrow.png";
 export const Programs = () => {
   return (
     // <div className="center" >
-    <ProgramContainer>
+    <ProgramContainer id="programs">
       <Header>
         <Header.Stroke>Explore our</Header.Stroke>
         <div>Programs</div>
@@ -23,7 +23,7 @@ export const Programs = () => {
 
       <Wrapper>
         {programsData.map((value) => (
-          <ProgramDataWrapper>
+          <ProgramDataWrapper key={value.heading}>
             <SvgIcon>{value.image}</SvgIcon>
             <Title>{value.heading}</Title>
             <Info>{value.details}</Info>

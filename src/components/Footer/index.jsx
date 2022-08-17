@@ -17,13 +17,17 @@ export const Footer = () => {
       <FooterBlur className="blur" />
       <Wrapper>
         <IconWrapper>
-          <a href="https://www.instagram.com/muhammad.alforuq" target="_blank">
+          <a
+            rel="noreferrer"
+            href="https://www.instagram.com/muhammad.alforuq"
+            target="_blank"
+          >
             <Instagram />
           </a>
-          <a href="https://github.com/AlForuq" target="_blank">
+          <a rel="noreferrer" href="https://github.com/AlForuq" target="_blank">
             <Github />
           </a>
-          <a href="https://www.linkedin.com" target="_blank">
+          <a rel="noreferrer" href="https://www.linkedin.com" target="_blank">
             <LinkedIn />
           </a>
         </IconWrapper>

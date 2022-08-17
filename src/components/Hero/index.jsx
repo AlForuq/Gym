@@ -23,6 +23,8 @@ import hero_image from "../../assets/hero_image.png";
 import hero_image_back from "../../assets/hero_image_back.png";
 import Calories from "../../assets/calories.png";
 
+import CountUp from "react-countup";
+
 export const Hero = () => {
   const Heart = (
     <svg
@@ -40,7 +42,7 @@ export const Hero = () => {
     </svg>
   );
   return (
-    <HeroContainer>
+    <HeroContainer id="home">
       <Left>
         <Header />
         <Best>
@@ -62,24 +64,30 @@ export const Hero = () => {
 
         <Figures>
           <Figures.Wrapper>
-            <Figures.Num>+ 140</Figures.Num>
+            <Figures.Num>
+              + <CountUp start={100} end={140} duration={4} />{" "}
+            </Figures.Num>
             <Figures.Info>EXPERT COACHES</Figures.Info>
           </Figures.Wrapper>
 
           <Figures.Wrapper>
-            <Figures.Num>+ 978</Figures.Num>
+            <Figures.Num>
+              + <CountUp start={800} end={978} duration={4} />
+            </Figures.Num>
             <Figures.Info>MEMBER JOINED</Figures.Info>
           </Figures.Wrapper>
 
           <Figures.Wrapper>
-            <Figures.Num>+ 50</Figures.Num>
+            <Figures.Num>
+              + <CountUp start={0} end={50} duration={4} />
+            </Figures.Num>
             <Figures.Info>FITNESS PROGRAMS</Figures.Info>
           </Figures.Wrapper>
         </Figures>
 
         <ButtonWrapper>
           <Button>Get Started</Button>
-          <Button transparent >Learn More</Button>
+          <Button transparent>Learn More</Button>
         </ButtonWrapper>
       </Left>
       <Right>

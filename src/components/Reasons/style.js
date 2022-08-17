@@ -4,6 +4,11 @@ export const ReasonsContainer = styled.div`
   display: flex;
   padding: 2rem 2rem 0rem 2rem;
   grid-template: 2rem;
+
+  @media (max-width: 768px){
+    flex-direction:column;
+    gap:3rem;
+  }
 `;
 
 export const Left = styled.div`
@@ -12,6 +17,29 @@ export const Left = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: 1fr;
   gap: 1rem;
+
+  @media (max-width: 768px) {
+    grid-auto-rows: auto;
+
+    > :nth-child(1) {
+      width: 7rem;
+      height: 17rem;
+    }
+
+    > :nth-child(2) {
+      width: 8rem;
+      height: 10rem;
+    }
+
+    > :nth-child(3) {
+      width: 8rem;
+      height: 6rem;
+    }
+
+    > :nth-child(4) {
+      display:none;
+    }
+  }
 `;
 
 Left.Img1 = styled.img`
